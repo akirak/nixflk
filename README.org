@@ -1,0 +1,30 @@
+* Nix/NixOS Configuration
+This is my configuration files for Linux, based on [[https://github.com/nrdxp/nixflk][nixflk]].
+** Table of contents
+:PROPERTIES:
+:TOC: siblings
+:END:
+** Installation
+*** Installing Nix on non-NixOS
+#+begin_src sh
+sh <(curl -L https://nixos.org/nix/install)
+#+end_src
+*** Cloning the repository
+#+begin_src sh
+cd ~
+git clone https://github.com/akirak/nixflk.git
+#+end_src
+** Usage
+[[file:shell.nix][shell.nix]] provides =nix= executable with flakes enabled:
+
+#+begin_src sh
+nix-shell
+#+end_src
+
+Files are organized according to [[https://github.com/akirak/nixflk/blob/template/DOC.md][nixflk/DOC.md at template · akirak/nixflk · GitHub]].
+** Resources
+- [[https://github.com/nrdxp/nixflk][GitHub - nrdxp/nixflk: highly structured NixOS configuration database]]
+- [[https://nixos.wiki/wiki/Flakes][Flakes - NixOS Wiki]]
+- [[https://nixos.wiki/wiki/Nix_command/flake][Nix command/flake - NixOS Wiki]]
+- [[https://github.com/numtide/flake-utils][GitHub - numtide/flake-utils: Pure Nix flake utility functions]]
+- [[https://www.tweag.io/blog/2020-05-25-flakes/][Tweag - Nix Flakes, Part 1: An introduction and tutorial]]
